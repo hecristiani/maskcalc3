@@ -1,0 +1,406 @@
+<style>
+  .campo1 {
+    position: absolute;
+    top: 300px;
+    left: 5%;
+    width:100px;
+  }
+
+  .campo2 {
+    position: absolute;
+    top: 300px;
+    left: 80%;
+    width:100px;
+  }
+
+.campo3 {
+    position: absolute;
+    top: 400px;
+    left: 5%;
+    width:100px;
+  }
+
+  .campo4 {
+    position: absolute;
+    top: 400px;
+    left: 80%;
+    width:100px;
+  }
+
+.campo5 {
+    position: absolute;
+    top: 500px;
+    left: 5%;
+    width:100px;
+  }
+
+  .campo6 {
+    position: absolute;
+    top: 500px;
+    left: 80%;
+    width:100px;
+  }
+
+<style>
+  body {
+    background-color: #d3d3d3; /* Gris claro */
+  }
+</style>
+
+
+<style>
+  body {
+    background-color: #d3d3d3; /* Gris claro */
+  }
+</style>
+
+
+
+
+
+
+<style>
+  .imagen-centro {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%; /* Ajustá el tamaño según lo que necesites */
+  }
+</style>
+
+<img src="cabeza777.gif" alt="Imagen cabeza" class="imagen-centro">
+
+
+
+
+
+
+
+</style>
+
+<div class="campo1">
+  <label for="np_od" class="form-label">NP_OD</label>
+  <input type="text" class="form-control" id="np_od" >
+</div>
+
+<div class="campo2">
+  <label for="np_oi" class="form-label">NP_OI</label>
+  <input type="text" class="form-control" id="np_oi">
+</div>
+
+<div class="campo3">
+  <label for="mejor_vo_od" class="form-label">MEJOR_VO_OD</label>
+  <input type="text" class="form-control" id="mejor_vo_od" >
+</div>
+
+<div class="campo4">
+  <label for="mejor_vo_oi" class="form-label">MEJOR_VO_OI</label>
+  <input type="text" class="form-control" id="mejor_vo_oi" >
+</div>
+
+<div class="campo5">
+  <label for="mayor_gap_od" class="form-label">MAYOR_GAP_OD</label>
+  <input type="text" class="form-control" id="mayor_gap_od" >
+</div>
+
+<div class="campo6">
+  <label for="mayor_gap_oi" class="form-label">MAYOR_GAP_OI</label>
+  <input type="text" class="form-control" id="mayor_gap_oi" >
+</div>
+
+
+
+
+<style>
+  .boton1-absoluto {
+    position: absolute;
+    top: 600px; /* Ajustá según la ubicación deseada */
+    left: 45%;  /* Centrado horizontal */
+    transform: translateX(-50%);
+    background-color: greenyellow;
+  }
+</style>
+
+<button class="btn btn-primary boton1-absoluto">CALCULAR</button>
+<button id="btnCalcular" class="btn btn-primary boton1-absoluto">CALCULAR</button>
+
+<style>
+  .boton2-absoluto {
+    position: absolute;
+    top: 600px; /* Ajustá según la ubicación deseada */
+    left: 55%;  /* Centrado horizontal */
+    transform: translateX(-50%);
+  }
+</style>
+
+<button class="btn btn-primary boton2-absoluto">LIMPIAR</button>
+
+<h1 style="text-align: center; font-size: 3rem; color: #333;">CALCULADORA DE ENMASCARAMIENTO LOGOAUDIOMETRIA</h1>
+
+
+<style>
+  .label-oido-derecho {
+    position: absolute;
+    top: 400px;   /* Ajustá según la ubicación deseada */
+    left: 20%;  /* Ajustá según la ubicación deseada */
+    font-weight: bold;
+    font-size: 18px;
+    color:red;
+  }
+</style>
+
+<label class="label-oido-derecho">OIDO DERECHO</label>
+
+
+<style>
+  .label-oido-izquierdo {
+    position: absolute;
+    top: 400px;   /* Ajustá según la ubicación deseada */
+    left: 65%;  /* Ajustá según la ubicación deseada */
+    font-weight: bold;
+    font-size: 18px;
+    color:blue;
+  }
+</style>
+
+<label class="label-oido-izquierdo">OIDO IZQUIERDO</label>
+
+
+
+<style>
+  .campo-radio {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+</style>
+
+<div class="campo-radio">
+  <label class="form-label">ESTIMULO:</label><br>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="estimulo" id="tipo1" value="supra" checked>
+    <label class="form-check-label" for="tipo1">SUPRA-AURAL</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="estimulo" id="tipo2" value="insercion">
+    <label class="form-check-label" for="tipo2">INSERCION</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="estimulo" id="tipo3" value="osea">
+    <label class="form-check-label" for="tipo3">OSEA</label>
+</div>
+
+
+
+<!-- Campo de texto AIE a la derecha del bloque ESTIMULO -->
+<div class="campo-aie">
+  <label for="aie" class="form-label">AIE:</label>
+  <input type="text" id="aie" class="form-control">
+</div>
+<style>
+  .campo-aie {
+    position: absolute;
+    top: 5px;     /* misma altura que ESTIMULO */
+    left: 115%;    /* ajustá según cómo lo quieras ubicado horizontalmente */
+    width: 80px;
+  }
+</style>
+
+
+
+
+
+
+
+
+<style>
+  .campo-radio {
+    position: absolute;
+    top: 110px;
+    left: 0px;
+  }
+</style>
+
+<div class="campo-radio">
+  <label class="form-label">ENMASCARAMIENTO:</label><br>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="masking" id="tipo4" value="supra" checked>
+    <label class="form-check-label" for="tipo4">SUPRA-AURAL</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="masking" id="tipo5" value="insercion">
+    <label class="form-check-label" for="tipo5">INSERCION</label>
+  </div>
+
+
+
+<!-- Campo de texto AIM a la derecha del bloque ENMASCARAMIENTO -->
+<div class="campo-aie">
+  <label for="aim" class="form-label">AIM:</label>
+  <input type="text" id="aim" class="form-control">
+</div>
+<style>
+  .campo-aie {
+    position: absolute;
+    top: 5px;     /* misma altura que ESTIMULO */
+    left: 110%;    /* ajustá según cómo lo quieras ubicado horizontalmente */
+    width: 80px;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+ 
+<script>
+  // Esta función se activa al hacer clic en el botón "LIMPIAR"
+  document.querySelector('.boton2-absoluto').addEventListener('click', function() {
+    // Selecciona todos los input tipo texto
+    const inputs = document.querySelectorAll('input[type="text"]');
+    
+    // Recorre cada uno y les borra el contenido
+    inputs.forEach(input => input.value = '');
+    
+    // También podés desmarcar radio buttons si querés:
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(r => r.checked = false);
+  });
+</script>
+
+
+<script>
+  const radios = document.querySelectorAll('input[name="estimulo"]');
+  const aieField = document.getElementById('aie');
+
+    aieField.value = 40;
+
+
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      let valorAIE = 0;
+
+      switch (radio.value) {
+        case 'supra':
+          valorAIE = 40;
+          break;
+        case 'insercion':
+          valorAIE = 60;
+          break;
+        case 'osea':
+          valorAIE = 0;
+          break;
+      }
+
+      aieField.value = valorAIE;
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const radioEnmascaramiento = document.querySelectorAll('input[name="masking"]');
+    const aimField = document.getElementById('aim');
+
+    aimField.value=40
+
+    radioEnmascaramiento.forEach(radio => {
+      radio.addEventListener('change', () => {
+        let valorAIM = 0;
+
+        if (radio.value === 'supra') {
+          valorAIM = 40;
+        } else if (radio.value === 'insercion') {
+          valorAIM = 60;
+        }
+
+        aimField.value = valorAIM;
+      });
+    });
+  });
+</script>
+
+
+<!-- Resultado MIN_MASK_OD -->
+<div id="resultado-minmask_od" style="
+  position: absolute;
+  top: 340px;  /* Ajustá según tu diseño */
+  left: 20%;
+  font-weight: bold;
+  font-size: 18px;
+  color: darkred;
+  /* ✅ Evita saltos de línea */
+    white-space: nowrap;
+    width: auto;
+
+">
+  MIN_MASK_OD=
+</div>
+
+
+
+<!-- Resultado MIN_MASK_OD -->
+<div id="resultado-maxmask_od" style="
+  position: absolute;
+  top: 340px;  /* Ajustá según tu diseño */
+  left: 200%;
+  font-weight: bold;
+  font-size: 18px;
+  color: darkred;
+  /* ✅ Evita saltos de línea */
+    white-space: nowrap;
+    width: auto;
+
+">
+  MAX_MASK_OD=
+</div>
+
+<!-- Resultado MED_MASK_OD -->
+<div id="resultado-medmask_od" style="
+  position: absolute;
+  top: 380px;  /* Ajustá según tu diseño */
+  left: 120%;
+  font-weight: bold;
+  font-size: 24px;
+  color: red;
+  /* ✅ Evita saltos de línea */
+    white-space: nowrap;
+    width: auto;
+
+">
+  MED_MASK_OD=
+</div>
+
+
+
+
+
+
+
+<script>
+  document.getElementById("btnCalcular").addEventListener("click", function () {
+    // Capturar los valores
+    const np_od = parseFloat(document.getElementById("np_od").value) || 0;
+    const aie = parseFloat(document.getElementById("aie").value) || 0;
+    const gap_oi = parseFloat(document.getElementById("mayor_gap_oi").value) || 0;
+    const aim = parseFloat(document.getElementById("aim").value) || 0;
+    const mejor_vo_od = parseFloat(document.getElementById("mejor_vo_od").value) || 0;
+
+    // Calcular MAX_MASK_OD
+    const minMask_od = np_od-aie+gap_oi;
+    const maxMask_od = aim + mejor_vo_od;
+    const medMask_od =(minMask_od+maxMask_od)/2
+
+    // Mostrarlo en los labels
+    document.getElementById("resultado-minmask_od").textContent = "MIN_MASK_OD (dB)= " + minMask_od;
+    document.getElementById("resultado-maxmask_od").textContent = "MAX_MASK_OD (dB)= " + maxMask_od;
+    document.getElementById("resultado-medmask_od").textContent = "MED_MASK_OD (dB)= " + medMask_od;
+  });
+</script>
