@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MASKCALC 3.0</title>
+  <style>
+    .aspect-ratio-box {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 9 / 16;
+      background-color: #e0e0e0;
+      margin: auto;
+      border: 2px solid #333;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-family: sans-serif;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .radio-group {
+      margin: 10px 0;
+    }
+
+    .text-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .text-fields label {
+      font-weight: bold;
+    }
+
+    .text-fields input {
+      width: 100px;
+      padding: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .aspect-ratio-box {
+        max-width: 100%;
+        border-width: 1px;
+      }
+
+      .content {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+
+    .radio-text-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.text-field-aie,
+.text-field-aim {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-field-aie input,
+.text-field-aim input {
+  width: 100px;
+  padding: 4px;
+}
+
+.triple-fields-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.triple-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.left-group {
+  align-items: flex-start;
+}
+
+.right-group {
+  align-items: flex-end;
+}
+
+
+
+  </style>
+
+
+
+
+</head>
+<body>
+  <div class="aspect-ratio-box">
+    <div class="content">
+      <p>MASKCALC 3.0</p>
+
+     <div class="radio-text-row">
+  <div class="radio-group">
+    <p>ESTIMULO:</p>
+    <input type="radio" name="group1" id="g1_1" checked>
+    <label for="g1_1">SUPRA-AURAL</label><br>
+    <input type="radio" name="group1" id="g1_2">
+    <label for="g1_2">INSERCION</label><br>
+    <input type="radio" name="group1" id="g1_3">
+    <label for="g1_3">OSEA</label>
+  </div>
+  <div class="text-field-aie">
+    <label for="aie">AIE:</label><br>
+    <input type="text" id="aie" name="aie" value=40>
+  </div>
+</div>
+
+<div class="radio-text-row">
+  <div class="radio-group">
+    <p>ENMASCARADOR:</p>
+    <input type="radio" name="group2" id="g2_1" checked>
+    <label for="g2_1">SUPRA-AURAL</label><br>
+    <input type="radio" name="group2" id="g2_2">
+    <label for="g2_2">INSERCION</label>
+  </div>
+  <div class="text-field-aim">
+    <label for="aim">AIM:</label><br>
+    <input type="text" id="aim" name="aim" value=40>
+  </div>
+</div>
+
+
+<div class="triple-fields-row">
+  <div class="triple-fields left-group">
+    <label>NP_OD:</label>    
+    <input type="text" id="np_od" name="np_od" style="width: 60px;">
+    <label>MEJOR_VO_OD:</label>
+    <input type="text" id="mejor_vo_od" name="mejor_vo_od" style="width: 60px;">    
+    <label>MAX_GAP_OD:</label>
+    <input type="text" id="mayor_gap_od" name="mayor_gap_od" style="width: 60px;">    
+  </div>
+
+  <div class="triple-fields right-group">
+     <label>NP_OI:</label>    
+    <input type="text" id="np_oi" name="np_oi" style="width: 60px;">
+    <label>MEJOR_VO_OI:</label>
+    <input type="text" id="mejor_vo_oi" name="mejor_vo_oi" style="width: 60px;">    
+    <label>MAX_GAP_OI:</label>
+    <input type="text" id="mayor_gap_oi" name="mayor_gap_oi" style="width: 60px;">  
+  </div>
+</div>
+
+
+
+
+
+
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function actualizarCampos() {
+      const estimulo = document.querySelector('input[name="group1"]:checked');
+      const enmascarador = document.querySelector('input[name="group2"]:checked');
+
+      const aie = document.getElementById('aie');
+      const aim = document.getElementById('aim');
+
+      if (estimulo) {
+        switch (estimulo.id) {
+          case 'g1_1':
+            aie.value = 'SUPRA-AURAL seleccionado';
+            break;
+          case 'g1_2':
+            aie.value = 'INSERCION seleccionado';
+            break;
+          case 'g1_3':
+            aie.value = 'OSEA seleccionado';
+            break;
+        }
+      }
+
+      if (enmascarador) {
+        switch (enmascarador.id) {
+          case 'g2_1':
+            aim.value = 'SUPRA-AURAL seleccionado';
+            break;
+          case 'g2_2':
+            aim.value = 'INSERCION seleccionado';
+            break;
+        }
+      }
+    }
+
+    // Escuchar cambios en todos los radio buttons
+    const radios = document.querySelectorAll('input[type="radio"]');
+    radios.forEach(radio => {
+      radio.addEventListener('change', actualizarCampos);
+    });
+  });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
